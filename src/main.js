@@ -1,6 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
+import components from './components/UI/index'
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App)
+
+/* глобальная регистрация ui компоннетов, так мы можем использовать компоненты без импортов и регистрации */
+components.forEach((component) => app.component(component.name, component))
+
+app.mount('#app')
