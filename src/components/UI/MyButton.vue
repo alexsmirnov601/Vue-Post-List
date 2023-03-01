@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  /* для глобального комопнента */
   name: 'my-button',
 }
 </script>
